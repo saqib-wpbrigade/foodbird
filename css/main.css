@@ -72,7 +72,7 @@
   
 }
 body{
-background-color: #f1efe9;
+  background-color: #f1efe9;
 }
 .sidebar{
   position: sticky;
@@ -82,7 +82,21 @@ background-color: #f1efe9;
 }
 .main-body{
   flex: 1 1 77%;
+  
 }
+.main-body .head-mobile{
+  background-color: #fff;
+ display: none;
+  
+ 
+  padding: 9px 10px 7px;
+ 
+
+}
+.sidebar .toogle-btn{
+  display: none;
+}
+
 .logo{
   background: url(../img/logoshadow.png);
   background-position: center bottom;
@@ -125,7 +139,7 @@ text-decoration: none;
 transition: 0.3s all;
 }
 .navbar ul li a:hover{
-  font-weight: 600;
+  color: #fc8c15;
   transition: 0.3s all;
 }
 .social-icons{
@@ -142,31 +156,34 @@ transition: 0.3s all;
 }
 .hero-image{
   background: url(../img/homepagebannerimg.png);
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   height: 370px;
   width: 100%;
+  padding: 62px;
   display: block;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 .hero-image img{
   display: block;
 }
 .hero-image h1{
   position: relative;
-  top: 75%;
- 
-  text-align: center;
   
   font-family: 'akrobatbold';
-  font-size: 70px;
+  font-size: 67px;
   color: #ffff;
   text-transform: uppercase;
-  letter-spacing: 0px;
+  letter-spacing: 1px;
 line-height: 36px;
 filter: drop-shadow(0 0 27px rgba(16,16,16,0.34));
 
 }
 .hero-content{
-  padding-block: 84px;
+  padding-block: 84px 100px;
     padding-inline: 85px;
 
 }
@@ -182,15 +199,16 @@ font-weight: 500;
 text-align: center;
 }
 .button{
-  padding-block: 30px;
+  margin-top: 36px;
+  
 
 text-align: center;
 }
 .button a{
-  padding: 10px;
+  padding: 10px 26px;
   border-radius: 5px;
 background-color: #fc8c15;
-font-size: 19px;
+font-size: 16px;
 letter-spacing: 1px;
 line-height: 36px;
 color: #fcfcfc;
@@ -201,10 +219,12 @@ text-decoration: none;
 text-transform: uppercase;
 
 }
+
 .button a:hover{
 background-color: white;
 color: #fc8c15; 
 transition: 0.5s all;
+border: 1px solid #fc8c15;
 
 }
 
@@ -215,7 +235,8 @@ transition: 0.5s all;
 }
 .slider-box{
  position: relative;
-width: 500px;
+width:484px;
+margin-top: 32px;
 
 }
 .slider-box .slider{
@@ -230,18 +251,18 @@ width: 500px;
   position: relative;
     background-color: #dad9d3;
     background: url(../img/slidersectionbg.png) repeat;
-    padding: 63px 0 90px;
+    padding: 67px 0 86px;
     overflow: hidden;
 }
 .slider-section h2{
-  font-size: 28px;
+  font-size: 24px;
 letter-spacing: 3px;
 line-height: 36px;
 color: #000000;
 font-family: 'akrobatregular';
 text-align: center;
 text-transform: uppercase;
-margin-bottom: 25px;
+
 }
 .next-btn{
   position: absolute;
@@ -280,8 +301,10 @@ margin-bottom: 25px;
     border: 2px solid #000;
     border-radius: 50px;
     overflow: hidden;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    margin: 0px 0px 1px 33px;
   }
   .slider-box .slick-dots li button{
     background-color:transparent;
@@ -297,56 +320,62 @@ margin-bottom: 25px;
 }
 .slider-content{
   position: relative;
+  margin-top: 34px;
 }
 .slider-content h1{
-  font-size: 35px;
+  font-size: 32px;
+  letter-spacing: -1px;
 line-height: 36px;
 color: #000000;
 font-family: 'akrobatsemibold';
 text-align: center;
 text-transform: uppercase;
-margin: 20px 0px;
+
 }
 .slider-content p{
   font-size: 20px;
 letter-spacing: 0px;
-line-height: 32px;
+line-height: 26px;
 color: #000000;
 font-family: 'Chaparral Pro';
+margin-top: 11px;
 
 
 text-align: center;
 }
 .slider-content{
   position: relative;
-  max-width: 430px;
+  max-width: 441px;
 }
 .slider-content a{
-  padding: 10px 20px;
+  padding: 10px 23px;
+  font-size: 18px;
 }
 .partner-section{
   position: relative;
-  padding: 44px;
+  padding: 66px 42px;
 }
 .partner-section h2{
-  font-size: 28px;
-  letter-spacing: 3px;
+  font-size: 25px;
+  letter-spacing: 2px;
   line-height: 36px;
   color: #000000;
   font-family: 'akrobatregular';
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 25px;
+  
 }
 .cards{
   position: relative;
   background-color: white;
   text-align: center;
+  
 }
 .partner-section .container{
   display: flex;
-    
-    gap: 18px;
+    width: 712px;
+    margin-top: 38px;
+    gap: 20px;
     justify-content: center;
 }
 .cards .card-image{
@@ -354,28 +383,134 @@ text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-  margin: 20px 0px;
+    margin: 37px 0px 8px;
 }
 .cards p{
   font-size: 20px;
-  letter-spacing: 0px;
-  line-height: 32px;
+  letter-spacing: -1px;
+  line-height: 24px;
   color: #000000;
   font-family: 'Chaparral Pro';
-  
+  margin-top: 12px;
   
   text-align: center;
 }
 .card-content{
-padding-bottom: 30px;
+ 
+  padding: 32px 40px 54px 40px;
+}
+.cards .card-content h2{
+  font-size: 20px;
+  letter-spacing: -1px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: 500;
+  font-family: 'akrobatsemibold';
+  text-align: center;
+  
+
+
 }
 .card-content a{
   color: #959595;
   font-family: 'Chaparral Pro';
   font-size: 18px;
+  display: block;
+    margin-top: 14px;
 
+}
+.card-content a:hover{
+  color: #000;
+  transition: 0.3s all;
 }
 .footer-image{
   background-image: url(../img/footerimg.png);
   height: 332px;
+}
+.partner-section .button{
+  margin-top: 53px;
+  
+    padding-right: 8px;
+}
+.partner-section .button a{
+  font-size: 18px;
+  padding: 10px 20px;
+}
+@media (max-width:767px) {
+  .sidebar{
+    position:fixed;
+    width:0px;
+    min-width: 0px;
+    display: none;
+  }
+  .sidebar.active{
+    display: block;
+    width: 200px;
+    left: 0px;
+    width: 251px;
+    z-index: 5;
+    height: 100vh;
+  }
+  .main-body .head-mobile{
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sidebar.active .toogle-btn{
+    display: block;
+    position: absolute;
+    left: 85%;
+  }
+.toogle-btn{
+    display: block;
+    position: absolute;
+    left: 10px;
+}
+  
+ .hero-section .hero-image{
+    height: 315px;
+  }
+  .hero-image h1{
+    font-size: 45px;
+  }
+  .slider-section .container{
+    width: 300px;
+  }
+  .slider-section .slider-box{
+    width: 261px;
+    margin-top: 15px;
+  }
+  .partner-section .container{
+    width: 300px;
+    flex-direction: column;
+  }
+  
+    .hero-content {
+      padding-block: 40px 40px;
+      padding-inline: 51px;
+  }
+  .hero-content p{
+    line-height: 27px;
+  }
+  .partner-section{
+   
+      position: relative;
+      padding: 66px 0px;
+  }
+  .slider-section{
+    padding: 30px 0 48px;
+  }
+  .slider-content h1{
+    font-size: 25px;
+  }
+  .slider-content p{
+    font-size: 18px;
+  }
+  .slider-content a {
+    padding: 11px 16px;
+    font-size: 15px;
+  
+  }
+  
 }
