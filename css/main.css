@@ -67,7 +67,7 @@
 }
 .wrapper{
   display: flex;
-  
+  overflow: hidden;
   justify-content: center;
   
 }
@@ -77,11 +77,16 @@ body{
 .sidebar{
   position: sticky;
   background-color: #ffff;
-  flex: 1 1 22%;
+  overflow: hidden;
+  width: 241px;
+  min-width: 241px;
+  top: 0;
  
 }
 .main-body{
-  flex: 1 1 77%;
+  position: relative;
+  flex: 1;
+    width: 70%;
   
 }
 .main-body .head-mobile{
@@ -89,7 +94,7 @@ body{
  display: none;
   
  
-  padding: 9px 10px 7px;
+  padding: 6px 10px 7px;
  
 
 }
@@ -266,7 +271,7 @@ text-transform: uppercase;
 }
 .next-btn{
   position: absolute;
-  top: 40%;
+  top: 38%;
   transform: translate(10px, 10px);
   right: 0%;
   color: #000000;
@@ -373,7 +378,7 @@ text-align: center;
 }
 .partner-section .container{
   display: flex;
-    width: 712px;
+    max-width: 712px;
     margin-top: 38px;
     gap: 20px;
     justify-content: center;
@@ -420,7 +425,7 @@ text-align: center;
 
 }
 .card-content a:hover{
-  color: #000;
+  text-decoration: none;
   transition: 0.3s all;
 }
 .footer-image{
@@ -441,15 +446,21 @@ text-align: center;
     position:fixed;
     width:0px;
     min-width: 0px;
-    display: none;
+    
+    opacity: 0;
+    visibility: hidden;
+    
   }
   .sidebar.active{
     display: block;
-    width: 200px;
+    
     left: 0px;
-    width: 251px;
+    width: 210px;
     z-index: 5;
     height: 100vh;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s all;
   }
   .main-body .head-mobile{
     display: block;
@@ -460,35 +471,53 @@ text-align: center;
   .sidebar.active .toogle-btn{
     display: block;
     position: absolute;
+    top: 10px;
     left: 85%;
+    cursor: pointer;
   }
 .toogle-btn{
     display: block;
     position: absolute;
     left: 10px;
+    cursor: pointer;
 }
   
  .hero-section .hero-image{
-    height: 315px;
+    min-height: 170px;
+    padding: 23px;
   }
   .hero-image h1{
-    font-size: 45px;
-  }
-  .slider-section .container{
-    width: 300px;
-  }
-  .slider-section .slider-box{
-    width: 261px;
-    margin-top: 15px;
-  }
-  .partner-section .container{
-    width: 300px;
-    flex-direction: column;
+    font-size: 41px;
   }
   
+  .slider-section .slider-box{
+    min-width: 253px;
+    margin-top: 1px;
+  }
+  .partner-section .container{
+    min-width: 280px;
+    flex-direction: column;
+    margin-top: 19px;
+    gap: 13px;
+  }
+  .partner-section h2{
+    font-size: 18px;
+    padding-inline: 68px;
+    letter-spacing: 2px;
+    line-height: 26px;
+  }
+  .card-content{
+    padding: 20px 25px 54px 18px;
+  }
+  .card-content h2{
+    padding-inline: 0px;
+  }
     .hero-content {
       padding-block: 40px 40px;
-      padding-inline: 51px;
+      padding-inline: 15px;
+  }
+  .hero-content .button a{
+    padding: 8px 15px;
   }
   .hero-content p{
     line-height: 27px;
@@ -496,21 +525,100 @@ text-align: center;
   .partner-section{
    
       position: relative;
-      padding: 66px 0px;
+      padding: 33px 0px;
+  }
+  .cards .card-image{
+    margin: 29px 0px 8px;
   }
   .slider-section{
-    padding: 30px 0 48px;
+    padding: 24px 0 43px;
   }
   .slider-content h1{
-    font-size: 25px;
+    font-size: 23px;
   }
   .slider-content p{
-    font-size: 18px;
+    font-size: 17px;
+    line-height: 21px;
+    margin-top: 4px;
+  }
+  .slider-content{
+    margin-top: 25px;
+    
+  }
+  .slider-content .button{
+    margin-top: 20px;
   }
   .slider-content a {
-    padding: 11px 16px;
+    padding: 8px 13px;
     font-size: 15px;
   
   }
+  .slider-section h2{
+    font-size: 17px;
+  }
+  .slider-arrows button {
+    
+    width: 18px;
+    height: 18px;
+    border-radius: 45px;
+    
+}
+.slider-box .slick-dots {
   
+  transform: translateY(28px);
+}
+.slider-box .slick-dots li {
+  
+  width: 8px;
+  height: 8px;
+  
+  margin: 0px 10px 2px 13px;
+}
+.partner-section .button {
+  margin-top: 23px;
+  padding-right: 0px;
+}
+.partner-section .button a {
+  font-size: 14px;
+  padding: 8px 14px;
+}
+
+.prev-btn {
+  position: absolute;
+  top: 36%;
+  left: -10px;}
+  .navbar ul li a {
+    font-size: 21px;
+    letter-spacing: -1px;
+    line-height: 49px;}
+    .navbar ul li::after{
+      top: 39px;
+    }
+    .social-icons{
+      margin-top: 26px;
+      padding: 0px;
+    }
+    .logo{
+      padding: 32px 0px 41px 0px;
+    }
+    .logo img{
+      width: 145px;
+      height: 138px;
+    }
+    .navbar{
+      margin-top: 14px;
+    }
+    .partner-section .container{
+      width: min(460px,90%);
+    }
+
+}
+@media (max-width:525px) {
+  .slider-section .slider-box{
+    max-width: 253px;
+}
+.next-btn{
+  top: 30%;
+}
+
 }

@@ -1,9 +1,11 @@
 const nav = document.querySelector('.sidebar')
-const btn = document.querySelector('.main-body .toogle-btn')
+const btn = document.querySelectorAll('.toogle-btn')
 
 
 
-btn.addEventListener('click', () => {
-    nav.classList.toggle('active')
-    
-})
+for(var i=0; i<btn.length; i++){
+    btn[i].addEventListener('click', () => {
+        nav.classList.toggle('active')
+    })
+}
+
